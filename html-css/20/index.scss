@@ -1,0 +1,118 @@
+@import "variables";
+@import "placeholder";
+@import "mixins";
+
+*{
+   box-sizing: border-box;
+   margin: 0px;
+   padding: Opx;
+   font-family: sans-serif;
+}
+
+main{
+   background-color: $body-bg-color;
+   width: 100vw;
+   padding: 50px;
+   display: grid;
+   grid-template-columns: 80% 20%;
+   gap: 20px;
+   height:100vh
+}
+
+.container{
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+   width: 100%;
+   height: auto;
+   text-align: start;
+
+   .first-line, .second-line{
+      display: flex;
+      gap: 20px;
+   }
+
+   .card-1, .card-2, .card-3, .card-4, .card-5{
+      padding: 25px;
+      border-radius: 8px;
+      box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.2);
+
+   }
+
+   .card{
+
+      &-1{
+         background-color:$card-1-color;
+
+      }
+
+      &-2{
+         background-color: $card-2-color;
+      }
+
+      &-3, &-5{
+         background-color: $card-3-color;
+         
+            .profil-infos, .center{
+               color: #646363;
+            }
+         
+      }
+
+      &-4{
+         background-color:$card-4-color;
+      }
+
+
+   }
+
+   .top{
+      display: flex;
+      gap: 15px;
+      align-items: center;
+      font-weight: 600;
+      color: #fff;
+   }
+
+   .center{
+      font-weight: bold;
+      font-size: large;
+      color: #fff;
+   }
+
+   .bottom, span{
+      color: hsl(0, 0%, 81%);
+   }
+
+   span{
+      font-weight: 500;
+   }
+
+}
+
+.circle, img{
+   height: 40px;
+   width: 40px;
+   border-radius: 50%;
+}
+
+
+
+
+
+@media screen and (max-width: 750px){
+   .container{
+      display:grid;
+   }
+
+   main{
+      display: flex;
+      flex-direction: column;
+      height: auto;
+   }
+
+   .first-line, .second-line{
+      display: flex;
+      flex-direction: column;
+   }
+}

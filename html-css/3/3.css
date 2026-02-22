@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    display: flex;
+    padding: 25px 10px;
+    justify-content: space-between;
+}
+
+nav *{
+    margin: 0px 10px;
+}
+
+nav button{
+    padding: 8px 15px;
+    border-radius: 20px;
+}
+
+.container{
+    height: 630px;
+    display: grid;
+    grid-template-rows:  44% 56%;
+}
+
+body{
+    margin: 0px 80px;
+}
+
+form{
+    margin: 35px 515px;
+}
+
+form *{
+    padding: 10px 15px;
+    border-radius: 35px;
+    margin: 0px 5px;
+}
+
+form button{
+    background-color:black;
+    color: #fff;
+}
+
+a{
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+#bas{
+    display: grid;
+    grid-template-rows: 15% 70% 15%;
+}
+
+#bas div{
+    display: flex;
+    justify-content:space-between ;
+    margin:  10px 10px;
+    align-items: center;
+}
+
+#bas span{
+    margin-bottom:20px;
+}
+
+#center{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    padding: 0px 85px;
+}
+
+#center div{
+    border: solid rgb(0, 0, 0);
+    margin: 0px 15px;
+    height: 100%;
+    width: 100%;
+    border-radius: 25px;
+    border: none;
+}
+
+#last{
+    margin-top: 5px;
+    padding-top: 30px;
+    border-top: 1px solid black;
+}
+
+#last div{
+    font-weight: bold;
+}
+
+#last button{
+    padding: 5px 12px;
+    border-radius: 15px;
+}

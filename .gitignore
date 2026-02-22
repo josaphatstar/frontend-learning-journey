@@ -1,0 +1,36 @@
+# Dossier docs Vue (français) — déjà versionné ailleurs ou à exclure
+Vue JS/docs-fr-main/
+
+# Dépendances
+node_modules/
+
+# Build / sorties
+dist/
+build/
+.vite/
+
+# Fichiers d'environnement (secrets)
+.env
+.env.local
+.env.*.local
+
+# Logs et cache
+*.log
+npm-debug.log*
+.cache/
+
+# Système d'exploitation
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Éditeurs / IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Optionnel : décommenter si tu ne veux pas versionner les lock files
+# package-lock.json
+# yarn.lock

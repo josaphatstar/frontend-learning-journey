@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Outfit", sans-serif;
+    color: #fff
+}
+
+body{
+    background-color:#121826
+}
+
+main{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+   width: 90%;
+   height: 95%;
+   display: grid;
+   grid-template-rows: 25% 75%;
+}
+
+.top{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bottom{
+    display: flex;
+    justify-content: center;
+    margin: 1.5vw 0;
+    flex-wrap: wrap;
+}
+
+section{
+    width: 310px;
+    height: 100%;
+    background-color: #212936;
+    border-radius: 17px;
+    margin: 20px;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1.3fr 3.5fr;
+    padding: 22px;
+}
+
+.icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 95%;
+    width: 22%;
+    border-radius: 50%;
+    background-color: #FCEED8
+}
+
+i{
+    font-size: 2rem;
+}
+
+h1{
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.top p, .content-1{
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #D2D5DA;
+}
+
+.content-2{
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 10px;
+    color: #9DA3AE;
+}
+
+section div{
+    display: flex;
+    align-items: center; 
+    justify-content: start;   
+}
+
+.image-bottom{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    background-color: #fff;
+}
+
+.fa-hand{
+    color: gold;
+}
+
+.fa-message{
+    color: white;
+}
+
+.img-bg1{
+    background-image: url("téléchargement2.jpg");  
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: center; 
+}
+
+.img-bg2{
+    background-image: url("téléchargement.jpg");  
+    background-repeat: no-repeat;
+    background-size: cover;  
+    background-position: center; 
+}
+
+.img-bg3{
+    background-image: url("téléchargement (1).jpg");  
+    background-repeat: no-repeat;
+    background-size: cover;  
+    background-position: center;
+}

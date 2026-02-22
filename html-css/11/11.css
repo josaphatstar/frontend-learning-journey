@@ -1,0 +1,155 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    padding: 0px 30px
+}
+
+header{
+    display: flex;
+    height: 80px;
+    justify-content: space-between;
+    padding: 0 70px;
+}
+
+.header-last div, .micro{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.header-center{
+    display: flex;
+    align-items: center
+}
+
+.header-last, .header-center{
+    display: flex;
+    margin-left: 180px;
+}
+
+.search{
+    margin: 0px 15px;
+    width: 580px;
+    height: 40px;
+    border-radius: 55px;
+}
+
+.header-last {
+    display: flex;
+    align-items: center;
+}
+
+.header-last div{
+    margin: 0px 10px
+}
+
+#create{
+    width: 70px;
+    border-radius: 25px;
+}
+
+.search, .micro, #create, #c3, #c2 {
+    border: 1px solid black;
+}
+
+.container{
+    height: 520px;
+    width: 100%;
+    padding: 10px 75px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.container div{
+    border: 1px solid black;
+    border-radius: 14px;
+}
+
+.main-left{
+    margin-right: 30px;
+    border: none;
+}
+
+.main{
+    height: 900px
+}
+
+.container-down{
+    height: 360px;
+    display: grid;
+    grid-template-rows: 30% 70%;
+}
+
+.channel{
+    display: flex;
+    align-items: center;
+    height: 65px;
+}
+
+.container-down-1{
+    padding: 0px 75px;
+}
+
+.channel-circle{
+    border: 1px solid black;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+}
+
+.container-down-2{
+    margin: 0px 75px;
+    border-radius: 10px ;
+    background-color: rgb(233, 232, 232);
+    width: 835px;
+    padding: 10px;
+}
+
+p{
+    margin-left: 8px;
+    font-size: large;
+}
+
+img{
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+}
+
+#video-image{
+    object-fit: cover;
+}
+
+input{
+    font-size: medium;
+    padding-left: 10px;
+}
+
+.main-right{
+    padding: 5px 15px;
+    padding-top: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+
+}
+
+#download{
+    height: 18%;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    border: none;
+}
+
+#download img{
+   border-radius: 13px;
+}
+
+#download div{
+    margin: 0px 2px;
+}

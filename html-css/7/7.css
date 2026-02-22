@@ -1,0 +1,98 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    box-sizing: border-box;
+    border: none;
+}
+
+body{
+    padding: 0px 50px;
+    background-color: #292828;
+}
+
+#logo{
+    font-size: xx-large;
+    color: greenyellow;
+}
+
+#Sign_In{
+    background-color: greenyellow;
+    padding: 12px 40px;
+    font-size: large;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+    margin: 35px 0px;
+    font-size: large;
+}
+
+a{
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 40px;
+}
+
+.container{
+    height: 590px   ;
+    padding: 0px 10px;
+    display: grid;
+    grid-template-columns: 55% 45%;
+    z-index: 1
+}
+
+#container-1-2-in{
+    height:100%;
+    width: 80%;
+    margin-left: 20%;
+    border-radius: 50% 0% 0% 0%;
+    background-color: #fff;
+}
+
+#T1{
+    margin-top: 60px;
+    font-size: 80px;
+    margin-left: 50px;
+    color: greenyellow;
+}
+
+#lorem{
+    color: #fff;
+    margin-top: 20px;
+    width: 65%;
+    margin-left: 50px;
+    font-size:large;
+}
+
+span{
+    display: block;
+    height: 10px;
+}
+
+.container button{
+    background-color: greenyellow;
+    padding: 25px 35px;
+    font-size: large;
+    margin-left: 50px;
+    margin-top: 40px;
+    z-index: 5;   
+}
+
+#shape{
+    background-color: #ffffff;
+    position: absolute;
+    bottom: 17px;
+    left: 70px;
+    height: 115px;
+    width: 115px;
+    z-index: 2;
+    border-radius: 0% 100% 0% 0%;
+}
+
+a:hover{
+    border:1px solid #fff;
+}

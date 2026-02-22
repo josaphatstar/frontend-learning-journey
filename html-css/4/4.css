@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    margin: 0px ;
+    background-color: #8a8d829c;
+}
+
+header, .container{
+    margin: 0px 150px;
+}
+
+header{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0px;
+}
+
+nav *{
+    margin: 0px 20px;
+}
+
+header button{
+    padding: 7px 15px;
+    margin: 0px 5px;
+    border: none;
+    border-radius: 5px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+#logo{
+    font-size: 21px;
+    font-weight: bold;
+}
+
+#button2{
+    background-color: greenyellow;
+}
+
+#button1{
+    background-color: #fff;
+}
+
+.container{
+    margin-top: 30px;
+    height: 460px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.container form input, button{
+    padding: 12px 13px;
+    font-size: 15px;
+    border-radius: 4px;
+    border: none;
+    margin-top: 15px;
+}
+
+#container-right{
+    display: flex;
+    padding-top: 25px;
+    padding-left: 130px
+}
+
+#container-left{
+    padding-top: 15px;
+}
+
+#container-left p{
+    margin: 15px 0px;
+}
+
+#cercles{
+    padding: 12px;
+    width: 60px;
+    height: 250px;
+    margin-right: 20px;
+}
+
+#cercles div{
+    border:none;
+    border: 1px solid black;
+    background-color: #d8842a;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    margin: 15px 0px;
+}
+
+#bloc{
+    margin: 20px 0px;
+    width: 290px;
+    height: 280px;
+    border-radius: 13px;
+    background-color: #fff;
+    border: none;
+}
+
+#bloc div{
+    width: 90;
+    height: 80%;
+    background-color:#8a8d829c;
+    margin: 47px 8px 15px 8px;
+    border-radius: 5px;
+}
+
+#bas{
+    background-color: #fff;
+    height: 170px;
+    width: 100%;
+}
+
+#bas div{
+    margin-left: 420px;
+    font-weight: bold;
+}
+
+#bas1{
+    padding-top: 85px;
+    padding-bottom: 10px;
+    padding-left: 300px;
+    color: rgb(138, 219, 16);
+}
+
+#bas2{
+    font-size: 45px;
+}

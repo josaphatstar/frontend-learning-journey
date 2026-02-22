@@ -1,0 +1,112 @@
+@font-face {
+   font-family: 'Poppins';
+   src: url('./fonts/Poppins-Bold.ttf') format('truetype');
+   font-weight: normal;
+   font-style: normal;
+}
+
+
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Poppins'
+}
+
+body{
+   background-color: hsl(0, 0%, 86%);
+}
+
+main{
+   height: 100vh;
+   width: 100vw;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.container{
+   background-color: #fff;
+   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+   width: 680px;
+   padding: 50px;
+   border-radius: 10px 10px 160px 10px;
+}
+
+.top {
+   display: flex;
+   align-items: center;
+   justify-content: start;
+   border-bottom: 1px solid hsl(0, 1%, 44%);;
+   padding-bottom: 35px;
+   font-size: small;
+}
+
+.bottom{
+   height: 290px;
+   display: flex;
+   align-items: center;
+}
+
+#form-1{
+   display: flex;
+   color: hsl(0, 1%, 44%);
+}
+
+.date input{
+   margin-top: 10px;
+   border: 1px solid hsl(0, 1%, 44%);
+}
+
+.date label{
+   font-weight: 500;
+}
+
+#form-2{
+   margin-top: 30px;
+}
+
+.top input{
+   padding: 10px;
+   width: 110px;
+   height: 50px;
+   font-size: x-large;
+   font-weight: 500;
+}
+
+label {
+   font-weight: bold;
+}
+
+.date{
+   margin-right: 30px;
+}
+
+.bottom label, .bottom input{
+   font-size: 70px;
+   border: none;
+   font-style: italic;
+   font-weight: 500;
+}
+
+.bottom input{
+   width: 98px;
+   color: hsl(259, 100%, 65%);
+}
+
+.circle{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   height: 70px;
+   width: 70px;
+   border-radius: 50%;
+   background-color: hsl(259, 100%, 65%);
+   position: relative;
+   left: 510px;
+   bottom: 320px;
+}
+
+.circle:hover{
+   cursor:pointer;
+}

@@ -1,0 +1,143 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    padding: 10px 125px;
+    box-sizing: border-box;
+}
+
+header{
+    font-weight: 500;
+    font-family: sans-serif;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+a:hover{
+    border-top: solid  rgb(87, 110, 172); ;
+}
+
+a{
+    margin: 0px 25px;
+    text-decoration: none;
+    color: black;
+    padding: 5px;
+}
+
+.logo{
+    color: rgb(87, 110, 172);
+    font-family: fantasy;
+    font-size: x-large;
+}
+
+.search{
+    font-weight: 500;
+    font-family: sans-serif;
+    width: 7%;
+    font-size: small;
+    border-bottom: 1px solid  rgb(87, 110, 172);
+}
+
+.main{
+    margin: 0px 30px;
+    margin-top: 90px;
+    height: 575px;
+    display: grid;
+    grid-template-rows: 75% 25%;
+}
+
+.main-top{
+    display: grid;
+    grid-template-columns: 55% 45%;
+}
+
+.main-top-right{
+    display: grid;
+    grid-template-rows: 30% 30% 40%;
+    font-family: sans-serif;
+}
+
+h1, .main-top-right-1 div{
+    display: inline-block;
+}
+
+.main-top-right-1 div{
+    border: 2px solid rgb(87, 110, 172); 
+    width: 20%;
+    position: relative;
+    left: -240px;
+}
+
+.main-top-right-2{
+    padding-right: 165px;
+}
+
+.main-top-right-3{
+    display: flex;
+}
+
+#videos{
+    background-color: rgb(87, 110, 172);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+p{
+    letter-spacing: 1px;
+    font-family: serif;
+    line-height: 20px;
+}
+
+.main-top-left div{
+    margin: 10px;
+    border: solid  rgb(87, 110, 172);
+    width: 90%;
+    height: 90%;
+    border-radius: 25px;
+}
+
+.main-down{
+    display: flex;
+    align-items: center;
+    font-weight: 550;
+    font-family: sans-serif;
+}
+
+.main-down div{
+    margin-right: 50px;
+}
+
+.icons{
+    position: absolute;
+    left: 0;
+    top: 200px;
+    height: 320px;
+    width: 130px;
+    background-color: rgb(87, 110, 172);
+    border-radius: 5% 30% 70% 0%;
+    padding-top: 50px;
+}
+
+.icons div{
+    height: 30px;
+    width: 30px;
+    border-radius: 25%;
+    margin-top: 30px;
+    margin-left: 35px;
+    background-color: #fff;
+}
+
+.rl{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 120px;
+    width: 120px;
+    border-radius: 0% 0% 0% 100%;
+    background-color:  rgb(87, 110, 172);;
+}

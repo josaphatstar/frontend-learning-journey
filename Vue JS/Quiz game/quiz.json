@@ -1,0 +1,33 @@
+{
+   "title" : "Questionnaire sur les Films et Series",
+   "minimum_score" : 4,
+   "success_message" : "Felicitations! Vous etes un veritable cinéphile!",
+   "failure_message" : "Dommage! Vous devriez regarder plus de films et de séries",
+   "questions" : [
+      {
+         "question" : "Dans quelle film trouve-t-on le personnage de Jack Dawson",
+         "Choices" : ["Titanic", "Le seigneur des Anneaux", "Inception", "Avatar"],
+         "correct_answer" : "Titanic"
+      },
+      {
+         "question" : "Quelle série met en scène le personnage de Walter White",
+         "Choices" : ["Breaking Bad", "Stranger Things", "Game of Thrones", "The Walking Dead"],
+         "correct_answer" : "Breaking Bad"
+      },
+      {
+         "question" : "Dans quelle film Harry Potter rencontre-t-il pour la première fois Lord Voldemort?",
+         "Choices" : ["Harry Potter à l'école des sorciers", "Harry Potter et la Chambre des secrets", "Harry Potter et le prisonnier d'Azkaban", "Harry Potter et la Coupe de feu"],
+         "correct_answer" : "Harry Potter à l'école des sorciers"
+      },
+      {
+         "question" : "Quel est l'intelligence artificielle dans '2001: L'Odyssée de l'espace?'",
+         "Choices" : ["HAL 9000", "Siri", "Cortana", "Jarvis"],
+         "correct_answer" : "HAL 9000"
+      },
+      {
+         "question" : "Qui joue le role principal dans la série 'Sherlock' de la BBC?",
+         "Choices" : ["Benedict Cumberbatch", "David Tennant", "Mark Smith", "Tom Hiddleston"],
+         "correct_answer" : "Benedict Cumberbatch"
+      }
+   ]
+}

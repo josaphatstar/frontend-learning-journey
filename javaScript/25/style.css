@@ -1,0 +1,139 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body{
+   font-size: 16px;
+   font-family: sans-serif;
+   background-color: hsl(27, 66%, 92%);
+}
+
+main{
+   height: 100vh;
+   width: 100vw;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.container{
+   width: 32%;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   min-width: 380px;
+}
+
+.top{
+   border-radius: 15px;
+   height: 110px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 10px 30px;
+   background-color:  hsl(10, 79%, 65%);
+   color: #fff;
+}
+
+.bottom{
+   border-radius: 15px;
+   background-color: hsl(33, 100%, 98%);
+   padding: 20px 30px 30px 30px;
+   margin-top: 20px;
+}
+
+.spending-day-info{
+   font-size: 30px;
+   color: hsl(25, 47%, 15%);
+   font-weight: 600;
+}
+
+.balance{
+   font-size: xx-large;
+   margin-top: 10px;
+}
+
+.chart{
+   height: 250px;
+   border-bottom: hsl(27, 66%, 92%) solid;
+}
+
+.total{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin-top: 25px;
+}
+
+.total-month{
+   font-weight:600;
+   font-size: 40px;
+   color: hsl(25, 47%, 15%);
+}
+
+.right{
+   text-align: end;
+}
+
+.pourcentage{
+   margin-top: 10px;
+   font-weight: 600;
+   color: hsl(25, 47%, 15%);
+}
+
+.chart{
+   display: grid;
+   grid-template-rows: 80% 20%;
+   padding: 25px 0;
+}
+
+.chart-top {
+   display: flex;
+   justify-content: space-between;
+   align-items: flex-end; 
+   height: 200px;
+   margin-bottom: 20px;
+}
+
+.chart-top div {
+   width: 11%;
+   min-height: 1px;
+   background-color: hsl(10, 70%, 65%);
+   border-radius: 3px;
+   transition: height 0.3s ease;
+   position: relative;
+   display: block; 
+   cursor: pointer;
+}
+
+.amount-tooltip {
+   position: absolute;
+   top: -35px;
+   left: 50%;
+   transform: translateX(-50%);
+   background-color: hsl(25, 47%, 15%);
+   color: white;
+   padding: 5px 8px;
+   border-radius: 5px;
+   font-size: 14px;
+   opacity: 0;
+   transition: opacity 0.3s ease;
+}
+
+.chart-top div:hover {
+   opacity: 0.8;
+}
+
+.chart-top div:hover .amount-tooltip {
+   opacity: 1;
+}
+
+.chart-down{
+   color: black;
+   display: flex;
+   justify-content: space-between;
+   margin: 0 10px;
+   margin-top: 45px;
+}

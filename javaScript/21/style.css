@@ -1,0 +1,153 @@
+@font-face {
+   font-family: 'Roboto';
+   src: url('./fonts/Roboto-Regular.ttf') format('truetype');
+   font-weight: normal;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: 'Roboto';
+   src: url('./fonts/Roboto-Bold.ttf') format('truetype');
+   font-weight: bold;
+   font-style: normal;
+}
+
+
+*{
+   font-family: 'Roboto';
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body{
+   background-color: hsl(235, 18%, 26%);
+}
+
+main{
+   width: 100%;
+   height: 100vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.container{
+   background-color: #fff;
+   border-radius: 25px;
+   width: 58%;
+   display: grid;
+   grid-template-columns: 55% 45%;
+}
+
+.col1, .col2{
+   height: calc(auto + 50px);
+}
+
+.col2{
+   margin: 15px;
+   background-image:url("../21/images/illustration-sign-up-desktop.svg");
+   border-radius: 17px;
+}
+
+.col1{
+   margin: 40px;
+}
+
+li{
+   display: block;
+   margin-bottom: 10px;
+   display: flex;
+   align-items: center;
+}
+
+ul{
+   margin-bottom: 30px;
+}
+
+h1{
+   font-size: 50px;
+}
+
+p{
+   font-size: large;
+}
+
+.label{
+   margin-bottom: 5px;
+   font-weight: 500;
+}
+
+input{
+   padding: 15px;
+   margin-bottom: 20px;
+   width: 100%;
+   border-radius: 5px;
+   border: 1px solid hsl(0, 0%,58%);
+}
+
+#button{
+   font-weight: bold;
+   color: #fff;
+   background-color: hsl(234, 29%, 20%);
+   border: none;
+}
+
+span{
+   margin-right: 10px;
+}
+
+.label{
+   display: flex;
+   justify-content: space-between;
+}
+
+
+#error-message {
+   color: #d55d52;
+   font-size: 14px;
+}
+
+
+@media screen and (max-width: 1300px) {
+   .container{
+      height: 532px;
+      width: 750px;
+   }
+}
+
+
+@media screen and (max-width: 750px) {
+
+   main{
+      height: auto;
+      line-height: 25px;
+   }
+
+   .container{
+      display: flex;
+      height: auto;
+      width: 390px;
+      flex-direction: column-reverse;
+      border-radius: 0;
+   }
+
+   .col2{
+      height: 250px;
+      background-image:url("../21/images/illustration-sign-up-mobile.svg");
+      background-size: cover;
+      margin: 0px;
+   }
+
+   .col1{
+      margin: 21px;
+      margin-top: 30px;
+   }
+   
+   h1{
+      margin: 12px 0;
+   }
+
+
+}
+

@@ -1,0 +1,100 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.button{
+    border: 1px solid white;
+    padding: 6px 20px;
+    border-radius: 5px;
+}
+
+body{
+    margin: 20px 50px;
+    background-image: linear-gradient(to bottom, #000, #0002), url("top-view-noodles-with-fried-vegetables-with-tomatoes-salad-other-dishes-table.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+
+.logo{
+    font-size: x-large;
+}
+
+a{
+    text-decoration: none;
+    color: white
+}
+
+nav a{
+    margin: 0px 10px;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main{
+    margin-top: 20px;
+    height: 630px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form{
+    border: 1px solid #fff;
+    padding: 30px 25px;
+    padding-top: 20px;
+    font-size: small;
+    border-radius: 10px;
+}
+
+p,label{
+    color: #fff;
+}
+
+.input, form .button{
+    margin: 12px 0px;
+    padding: 9px;
+    width:230px
+}
+
+.input{
+    border: none;
+    background: none;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+}
+
+.check{
+    display: flex;
+    justify-content: space-between;
+}
+
+.Signup{
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+}
+
+form .button{
+    margin-top: 30px;
+    background-color: green;
+    border: none;
+    color: white;
+}
+
+.form-title{
+    margin-left: 40%;
+    margin-bottom: 10px;
+    font-size: x-large;
+}
+
+.lien{
+    color: rgb(0, 255, 0);
+}

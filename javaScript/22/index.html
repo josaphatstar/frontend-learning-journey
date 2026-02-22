@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <link rel="stylesheet" href="style.css">
+   <script src="script.js" defer></script>
+</head>
+<body>
+   <main>
+      <div class="container">
+         <div class="top">
+            <form id="form-1" action="#">
+               <div class="date">
+                  <label for="day-input">DAY</label> <br>
+                  <input type="text" id="day-input" name="DAY" placeholder="DD">
+                  <span class="error-message" id="day-error"></span>
+               </div>
+               <div class="date">
+                  <label for="month-input">MONTH</label> <br>
+                  <input type="text" id="month-input" name="MONTH" placeholder="MM">
+                  <span class="error-message" id="day-error"></span>
+               </div>
+               <div class="date">
+                  <label for="year-input">YEAR</label> <br>
+                  <input type="text" id="year-input" name="YEAR" placeholder="YYYY">
+                  <span class="error-message" id="day-error"></span>
+               </div>
+            </form>
+         </div>
+         <div class="bottom">
+            <form  id="form-2" action="#">
+               <div class="date-1">
+                  <input type="text" ,id="years-result" name="years" value="- -">
+                  <label for="years-result">years</label>
+               </div>
+               <div class="date-1">
+                  <input type="text" id="months-result" name="months" value="- -">
+                  <label for="months-result">months</label>
+               </div>
+               <div class="date-1">
+                  <input type="text" id="days-result" name="days" value="- -">
+                  <label for="days-result">days</label>
+               </div>
+            </form>
+         </div>
+         <div class="circle">
+            <img src="../22/images/icon-arrow.svg" alt="image de fleche vers le bas">
+         </div>
+      </div>
+   </main>
+</body>
+</html>
