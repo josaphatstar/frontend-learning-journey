@@ -1,132 +1,155 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
+   // Input Fields
+   const nameInput = document.getElementById('cardholder-name');
+   const numberInput = document.getElementById('card-number');
+   const monthInput = document.getElementById('month');
+   const yearInput = document.getElementById('year');
+   const cvcInput = document.getElementById('cvc');
+
+   // Display Fields
+   const nameDisplay = document.getElementById('card-name-display');
+   const numberDisplay = document.getElementById('card-number-display');
+   const dateDisplay = document.getElementById('card-date-display');
+   const cvcDisplay = document.getElementById('card-cvc-display');
+
+   // Error Spans
+   const nameError = document.getElementById('name-error');
+   const numberError = document.getElementById('card-number-error');
+   const dateError = document.getElementById('date-error');
+   const cvcError = document.getElementById('cvc-error');
+
    const form = document.querySelector('form');
-   const inputs = {
-      name : document.getElementById('cardholder-name'),
-      number : document.getElementById('card-number'),
-      month : document.getElementById('month'),
-      year : document.getElementById('year'),
-      cvc : document.getElementById('cvc')
-   };
 
-   function validateName(name){
-      return name.trim().length > 0 && /^[a-zA-Z\s]+$/.test(name);
+   // Helper: Update Card Number Display
+   function updateCardNumber(value) {
+      // Remove spaces and keep only first 16 digits
+      const cleanValue = value.replace(/\s/g, '').substring(0, 16);
+
+      // Pad with zeros if less than 16
+      const paddedValue = cleanValue.padEnd(16, '0');
+
+      // Split into groups of 4
+      const groups = paddedValue.match(/.{1,4}/g);
+
+      // Update the display
+      numberDisplay.innerHTML = '';
+      groups.forEach(group => {
+         const div = document.createElement('div');
+         div.className = 'zeros-group';
+         div.textContent = group;
+         numberDisplay.appendChild(div);
+      });
    }
 
-   function validateCardNumber(number) {
-      return /^[0-9]{16}$/.test(number.replace(/\s/g, ''));
-  }
-
-  function validateMonth(month) {
-   const monthNum = parseInt(month);
-   return monthNum >= 1 && monthNum <= 12;
+   // Helper: Update Date Display
+   function updateDate() {
+      const mm = monthInput.value.padStart(2, '0').substring(0, 2);
+      const yy = yearInput.value.padStart(2, '0').substring(0, 2);
+      dateDisplay.textContent = `${mm || '00'}/${yy || '00'}`;
    }
 
-   function validateYear(year) {
-      if (!/^\d{4}$/.test(year)) {
-          return false;
+   // Real-time Formatting (filtered input, but no card update yet)
+   numberInput.addEventListener('input', (e) => {
+      // Format input with spaces (UX helper)
+      let value = e.target.value.replace(/\D/g, ''); // Numbers only
+      let formattedValue = '';
+      for (let i = 0; i < value.length && i < 16; i++) {
+         if (i > 0 && i % 4 === 0) formattedValue += ' ';
+         formattedValue += value[i];
       }
-      const currentYear = new Date().getFullYear();
-      const yearNum = parseInt(year);
-      return yearNum >= currentYear && yearNum <= currentYear + 10;
-  }
-  
-
-   function validateCVC(cvc) {
-      const cleanCVC = cvc.replace(/\D/g, '');
-      return /^[0-9]{3}$/.test(cleanCVC);
-  }
-
-   function showError(element, message) {
-      element.style.borderColor = 'red';
-      const errorSpan = document.getElementById(`${element.id}-error`);
-      if (errorSpan) {
-          errorSpan.textContent = message;
-          errorSpan.style.display = 'block';
-      }
-  }
-
-   function resetError(element) {
-      element.style.borderColor = '';
-      const errorSpan = document.getElementById(`${element.id}-error`);
-      if (errorSpan) {
-         errorSpan.style.display = 'none';
-         }
-   }
-
-   function showDateError(message) {
-      inputs.month.style.borderColor = 'red';
-      inputs.year.style.borderColor = 'red';
-      const dateError = document.getElementById('date-error');
-      if (dateError) {
-          dateError.textContent = message;
-          dateError.style.display = 'block';
-      }
-  }
-  
-  function resetDateErrors() {
-      inputs.month.style.borderColor = '';
-      inputs.year.style.borderColor = '';
-      const dateError = document.getElementById('date-error');
-      if (dateError) {
-          dateError.style.display = 'none';
-      }
-  }
-
-   form.addEventListener('submit', function(event) {
-      event.preventDefault();
-      let isValid = true;
-
-      if (!validateName(inputs.name.value)) {
-         showError(inputs.name,'Wrong format, numbers only');
-         isValid = false;
-      } else {
-         resetError(inputs.name);
-      }
-      
-      if (!validateCardNumber(inputs.number.value)) {
-         showError(inputs.number, 'Wrong format, (16) numbers only');
-         isValid = false;
-     } else {
-         resetError(inputs.number);
-     }
-
-      const monthValue = inputs.month.value;
-      const yearValue = inputs.year.value;
-
-      // Date validation
-      if (!monthValue || !yearValue) {
-         showDateError("Month and year can't be blank");
-         isValid = false;
-      } else if (!validateMonth(monthValue)) {
-         showDateError('Month must be between 1-12');
-         isValid = false;
-      } else if (!/^\d{4}$/.test(yearValue)) {
-         showDateError('Year must be 4 digits');
-         isValid = false;
-      } 
-      else if (!validateYear(yearValue)) {
-         showDateError('Year must be in the future');
-         isValid = false;
-      }
-
-      if (!validateYear(inputs.year.value)) {
-         showError(inputs.year, 'Invalid year');
-         isValid = false;
-      } else {
-         resetError(inputs.year);
-      }
-
-      if (!validateCVC(inputs.cvc.value)) {
-         showError(inputs.cvc, 'Invalid CVC');
-         isValid = false;
-      } else {
-         resetError(inputs.cvc);
-      }
-
-      if (isValid) {
-         alert('Form is valid');
-         window.location.href = 'thank.html'
-      }
+      e.target.value = formattedValue;
    });
 
-})
+   monthInput.addEventListener('input', (e) => {
+      e.target.value = e.target.value.replace(/\D/g, '').substring(0, 2);
+   });
+
+   yearInput.addEventListener('input', (e) => {
+      e.target.value = e.target.value.replace(/\D/g, '').substring(0, 2);
+   });
+
+   cvcInput.addEventListener('input', (e) => {
+      e.target.value = e.target.value.replace(/\D/g, '').substring(0, 3);
+   });
+
+   // Update Card Visuals on Blur (After typing is finished)
+   nameInput.addEventListener('blur', (e) => {
+      nameDisplay.textContent = e.target.value || 'Jane Appleseed';
+   });
+
+   numberInput.addEventListener('blur', (e) => {
+      updateCardNumber(e.target.value);
+   });
+
+   monthInput.addEventListener('blur', () => {
+      updateDate();
+   });
+
+   yearInput.addEventListener('blur', () => {
+      updateDate();
+   });
+
+   cvcInput.addEventListener('blur', (e) => {
+      cvcDisplay.textContent = e.target.value || '000';
+   });
+
+   // Validation
+   function validate() {
+      let isValid = true;
+
+      // Reset errors
+      [nameInput, numberInput, monthInput, yearInput, cvcInput].forEach(el => el.classList.remove('error'));
+      [nameError, numberError, dateError, cvcError].forEach(el => {
+         if (el) el.textContent = '';
+      });
+
+      // Name
+      if (!nameInput.value.trim()) {
+         nameError.textContent = "Can't be blank";
+         isValid = false;
+      }
+
+      // Number
+      const cleanNumber = numberInput.value.replace(/\s/g, '');
+      if (!cleanNumber) {
+         numberError.textContent = "Can't be blank";
+         isValid = false;
+      } else if (cleanNumber.length < 16) {
+         numberError.textContent = "Wrong format, 16 digits required";
+         isValid = false;
+      }
+
+      // Date
+      if (!monthInput.value || !yearInput.value) {
+         dateError.textContent = "Can't be blank";
+         isValid = false;
+      } else {
+         const m = parseInt(monthInput.value);
+         if (m < 1 || m > 12) {
+            dateError.textContent = "Invalid month";
+            isValid = false;
+         }
+      }
+
+      // CVC
+      if (!cvcInput.value) {
+         cvcError.textContent = "Can't be blank";
+         isValid = false;
+      } else if (cvcInput.value.length < 3) {
+         cvcError.textContent = "Must be 3 digits";
+         isValid = false;
+      }
+
+      return isValid;
+   }
+
+   form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      if (validate()) {
+         // Success! 
+         // In a real app we might show the thank you state directly 
+         // but for this project we'll redirect to Thank.html
+         window.location.href = 'Thank.html';
+      }
+   });
+});
