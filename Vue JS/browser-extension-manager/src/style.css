@@ -1,0 +1,75 @@
+/* Design tokens — browser-extensions-manager (Frontend Mentor style guide) */
+:root {
+  --neutral-900: hsl(227, 75%, 14%);
+  --neutral-800: hsl(226, 25%, 17%);
+  --neutral-700: hsl(225, 23%, 24%);
+  --neutral-600: hsl(226, 11%, 37%);
+  --neutral-300: hsl(0, 0%, 78%);
+  --neutral-200: hsl(217, 61%, 90%);
+  --neutral-100: hsl(0, 0%, 93%);
+  --neutral-0: hsl(200, 60%, 99%);
+  --red-400: hsl(3, 86%, 64%);
+  --red-500: hsl(3, 71%, 56%);
+  --red-700: hsl(3, 77%, 44%);
+  --gradient-light: linear-gradient(180deg, #ebf2fc 0%, #eef8f9 100%);
+  --gradient-dark: linear-gradient(180deg, #040918 0%, #091540 100%);
+
+  --page-bg: var(--gradient-light);
+  --surface: var(--neutral-0);
+  --surface-elevated: #fff;
+  --border-subtle: var(--neutral-200);
+  --text-primary: var(--neutral-900);
+  --text-muted: var(--neutral-600);
+  --filter-bg: #fff;
+  --filter-border: var(--neutral-300);
+  --theme-toggle-bg: var(--neutral-100);
+  --shadow-header: 0 1px 3px hsla(227, 75%, 14%, 0.06);
+}
+
+[data-theme='dark'] {
+  --page-bg: var(--gradient-dark);
+  --surface: var(--neutral-800);
+  --surface-elevated: var(--neutral-700);
+  --border-subtle: var(--neutral-700);
+  --text-primary: var(--neutral-0);
+  --text-muted: var(--neutral-300);
+  --filter-bg: var(--neutral-800);
+  --filter-border: var(--neutral-600);
+  --theme-toggle-bg: var(--neutral-700);
+  --shadow-header: 0 1px 3px hsla(0, 0%, 0%, 0.25);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: 'Noto Sans', system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--text-primary);
+  background: var(--page-bg);
+  background-attachment: fixed;
+}
+
+#app {
+  min-height: 100vh;
+}
+
+button {
+  font: inherit;
+}
+
+button:focus-visible,
+input:focus-visible + .slider {
+  outline: 2px solid var(--red-500);
+  outline-offset: 2px;
+}
